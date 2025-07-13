@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Confirmed</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Order Confirmation</h2>
+    <p>Thank you for your order!</p>
+    <p>Your dress will be ready on the specified delivery date.</p>
+    <p>Order Details:</p>
+    <ul>
+      <li><strong>Customer Name:</strong> <%= customer.name %></li>
+      <li><strong>Dress Type:</strong> <%= customer.dressType %></li>
+      <li><strong>Total Amount:</strong> ₹<%= customer.payment.totalAmount %></li>
+      <li><strong>Amount Paid:</strong> ₹<%= customer.payment.amountPaid %></li>
+      <li><strong>Delivery Date:</strong> <%= customer.payment.deliveryDate %></li>
+    </ul>
+    <a href="/customers"><button>View All Customers</button></a>
+    <a href="/customer"><button>Add Another Customer</button></a>
+  </div>
+</body>
+</html>

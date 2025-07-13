@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Details</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Payment & Delivery</h2>
+    <form method="POST" action="/payment">
+      <input type="number" name="totalAmount" placeholder="Total Amount" required><br>
+      <input type="number" name="amountPaid" placeholder="Amount Paid" required><br>
+      <input type="date" name="deliveryDate" required><br>
+      <button type="submit">Finish</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Customers</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>All Customers</h2>
+    
+   
+    <form method="GET" action="/customers">
+      <input type="text" name="name" placeholder="Search by name" />
+      <button type="submit">Search</button>
+    </form>
+
+  
+    <% if (message) { %>
+      <p><%= message %></p>
+    <% } else if (customers.length === 0) { %>
+      <p>No customers found.</p>
+    <% } else { %>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Dress Type</th>
+          <th>Delivery Date</th>
+        </tr>
+        <% customers.forEach(c => { %>
+          <tr>
+            <td><%= c.name %></td>
+            <td><%= c.phone %></td>
+            <td><%= c.dressType %></td>
+            <td><%= c.payment.deliveryDate %></td>
+          </tr>
+        <% }) %>
+      </table>
+    <% } %>
+
+    <a href="/customer"><button>Add New Customer</button></a>
+  </div>
+</body>
+</html>

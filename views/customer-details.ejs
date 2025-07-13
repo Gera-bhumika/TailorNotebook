@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customer Details</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Customer Details</h2>
+
+    <p><strong>Name:</strong> <%= customer.name %></p>
+    <p><strong>Phone:</strong> <%= customer.phone %></p>
+    <p><strong>Gender:</strong> <%= customer.gender %></p>
+    <p><strong>Dress Type:</strong> <%= customer.dressType %></p>
+    <p><strong>Delivery Date:</strong> <%= customer.payment.deliveryDate %></p>
+
+    <h3>Measurements</h3>
+    <ul>
+      <% for (let key in customer.measurements) { %>
+        <li><strong><%= key %>:</strong> <%= customer.measurements[key] %></li>
+      <% } %>
+    </ul>
+
+    <a href="/customers"><button>Back to Customer List</button></a>
+  </div>
+</body>
+</html>
